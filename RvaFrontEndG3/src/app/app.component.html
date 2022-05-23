@@ -4,9 +4,9 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="over" [fixedInViewport]="true" opened mode="side">
     <mat-accordion>
-      <a mat-button style="text-align:center">
+      <a mat-button routerLink="/home" style="text-align:center">
         <mat-icon>
-          Home
+          home
         </mat-icon>
       </a>
       <mat-expansion-panel>
@@ -19,13 +19,13 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-button color="warn">Artikl</a>
+          <a mat-button routerLink="/artikl" color="warn">Artikl</a>
         </mat-nav-list>
         <mat-nav-list>
-          <a mat-button color="accent">Dobavljac</a>
+          <a mat-button routerLink="/dobavljac" color="accent">Dobavljac</a>
         </mat-nav-list>
         <mat-nav-list>
-          <a mat-button color="primary">Porudzbina</a>
+          <a mat-button routerLink="/porudzbina" color="primary">Porudzbina</a>
         </mat-nav-list>
       </mat-expansion-panel>
       <mat-expansion-panel>
@@ -36,15 +36,16 @@
           </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <a mat-button>O nama</a>
+          <a mat-button routerLink="/about">O nama</a>
         </mat-nav-list>
         <mat-nav-list>
-          <a mat-button>Autor</a>
+          <a mat-button routerLink="/author">Autor</a>
         </mat-nav-list>
         <mat-nav-list>
-          <a mat-button>Pocetna</a>
+          <a mat-button routerLink="/home">Pocetna</a>
         </mat-nav-list>
       </mat-expansion-panel>
     </mat-accordion>
   </mat-sidenav>
+  <router-outlet></router-outlet>
 </mat-sidenav-container>
