@@ -12,6 +12,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +28,8 @@ import { PorudzbinaComponent } from './components/model/porudzbina/porudzbina.co
 import { StavkaPorudzbineComponent } from './components/model/stavka-porudzbine/stavka-porudzbine.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
+import { FormsModule } from '@angular/forms';
+import { DobavljacDialogComponent } from './components/dialogs/dobavljac-dialog/dobavljac-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,8 @@ import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl
     DobavljacComponent,
     PorudzbinaComponent,
     StavkaPorudzbineComponent,
-    ArtiklDialogComponent
+    ArtiklDialogComponent,
+    DobavljacDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +60,10 @@ import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl
     MatTableModule,
     MatToolbarModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
