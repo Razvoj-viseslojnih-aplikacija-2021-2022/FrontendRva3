@@ -20,7 +20,7 @@ export class ArtiklService {
     return this.httpClient.post(`${ARTIKL_URI}`, artikl); 
   }
 
-  public updateAtikl(artikl: Artikl): Observable<any> {
+  public updateArtikl(artikl: Artikl): Observable<any> {
     return this.httpClient.put(`${ARTIKL_URI}`, artikl); 
   }
 
