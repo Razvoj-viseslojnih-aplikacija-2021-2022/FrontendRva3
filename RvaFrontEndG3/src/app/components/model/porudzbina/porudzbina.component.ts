@@ -17,6 +17,7 @@ export class PorudzbinaComponent implements OnInit {
   displayedColumns = ['id', 'datum','isporuceno','iznos','placeno','dobavljac', 'actions'];
   dataSource! : MatTableDataSource<Porudzbina>;
   subscription!: Subscription;
+  selectedPorudzbinaTop!: Porudzbina;
 
   constructor(private porudzbinaService: PorudzbinaService,
     private dialog: MatDialog) { }
@@ -44,5 +45,10 @@ export class PorudzbinaComponent implements OnInit {
         if(res === 1)
           this.loadData();
       });
+    }
+
+    public select(row:any){
+      console.log(row);
+      this.selectedPorudzbinaTop = row;
     }
 }

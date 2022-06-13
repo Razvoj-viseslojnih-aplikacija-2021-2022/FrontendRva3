@@ -39,4 +39,9 @@
 
   .title-center {
     margin: 0 auto;
-  }  
+  }
+  
+  .search-field{
+    left: 900px;
+    width: 220px;
+  }

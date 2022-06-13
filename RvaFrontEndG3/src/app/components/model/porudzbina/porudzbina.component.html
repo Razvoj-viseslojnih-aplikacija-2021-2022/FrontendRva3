@@ -55,7 +55,12 @@
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row
         style="cursor: pointer;"
-        *matRowDef="let row; columns: displayedColumns">
+        *matRowDef="let row; columns: displayedColumns"
+        (click)="select(row)">
       </mat-row>
     </mat-table>
+    <app-stavka-porudzbine *ngIf="selectedPorudzbinaTop" [selectedPorudzbinaBottom]="selectedPorudzbinaTop">
+
+    </app-stavka-porudzbine>
+
   </div>
